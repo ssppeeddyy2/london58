@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+
+        {% endblock %}
+        {% block head %}
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+            <style>
+                .navigation li a.active {
+                    font-weight: bold;
+                }
+            </style>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% set navigation = {
+        'about-us': 'About us',
+        } %}
+
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav center navigation">
+            {% block navigation %}
+                {% for route, title in navigation %}
+                    <li><a class="{{ app.request.attributes.get('_route') == route ? 'active' : '' }}" href="{{ path(route) }}">{{ title }}</a></li>
+                {% endfor %}
+            {% endblock %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+
+    {% block footer %}
+
+
+    {% endblock %}
+</html>

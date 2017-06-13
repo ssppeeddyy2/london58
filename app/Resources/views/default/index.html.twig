@@ -1,0 +1,295 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link rel="stylesheet"  href="{{ asset('css/lightslider.css')}}"/>
+{% endblock %}
+
+{% block navigation %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block body %}
+    <div class="main-banner">
+        <div class="overlay"></div>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="item">
+                        <h2>We Like to keep <br>things simple! </h2>
+                        <p class="banner_letter_spacing">From making a booking to delivering oustanding photographs</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item">
+                        <h2>Third booking is free</h2>
+                        <p class="banner_letter_spacing">To take uncertainty out of your first booking we offer it for FREE. You get to see how we work, how fast we work and quality of our work and customer service. You won’t pay anything and you don’t have to book us ever again, although that’s yet to happen.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2>First booking is free</h2>
+                    <p class="banner_letter_spacing">To take uncertainty out of your first booking we offer it for FREE. You get to see how we work, how fast we work and quality of our work and customer service. You won’t pay anything and you don’t have to book us ever again, although that’s yet to happen.</p>
+                </div>
+
+            </div>
+            <a href="#carousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+            <div class="banner-btn">
+                <a class="l58button" id="get_in_touch" href="#">Get in touch</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="introduction">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <h2 class="intro_heading">Introduction</h2>
+
+                <p class="intro_paragraph">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nibh ut ex euismod fermentum. Donec sit amet aliquam nunc. Integer orci tortor, porta nec lectus vel, dignissim faucibus turpis. Nullam ut suscipit erat.Maecenas ut enim quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel nibh ut ex euismod fermentum. Donec sit amet aliquam nunc. Integer orci tortor, porta nec lectus vel, dignissim faucibus turpis. Nullam ut suscipit erat.Maecenas ut enim quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+                </p>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-2 horizontal-bar intro-bar">
+            </div>
+            <div class="col-md-5">
+            </div>
+        </div>
+    </div>
+
+    <div class="booking_journey_background" id="booking_journey_top">
+        <div class="booking_journey_animate">
+            <div class="row booking_journey" id="booking_journey">
+                <div class="col-lg-4 col-lg-offset-4 booking_journey_header">
+                    <h2>A Booking Journey...</h2>
+                </div>
+            </div>
+
+
+            <div class="row booking_journey">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/011-application-form.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            You just fill accurately our booking form. All the informations are very important to us. It helps us estimate how much time we need to spent in the property as well as all the contact info to keep you updated
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/005-journalist.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            Our team will take care of your booking. Either arrange picking up property keys from your office or make arrangments with vendors/landlords/tenants for the first available time slot which is usually next working day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/010-envelope.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            We will send you a booking confirmation. It will sync with your callendar to keep track with your bookings.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/012-timer.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            Our photographers are always on time. We make sure they have plenty of time in between the bookings to get from one place to the next one. If someone is late….it won’t be us!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row booking_journey booking_journey_part2">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/013-tripod-with-camera.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            To take outstanding pictures and draw an accurate floorplan takes time. The booking will last anything from 45min for a one bedroom flat to 2hours for a big detached family home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/001-24-hours.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            We aim for 24hour turnaround time. 99% of the time you will get the files ready following morning. 1% of the time you get them in early afternoon.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/009-paint.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            We edit our photographs inhouse. Your booking might be attended by a different photographer but our editing team will ensure the photographs are consistent and are every time to the same high standard.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/003-keywords.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            You will get your files nicely presented in an online password protected gallery ready to be downloaded. We will also keep them for you for one year.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row booking_journey booking_journey_part3">
+
+                <div class="col-md-3 col-md-offset-5">
+                    <div class="booking_items">
+                        <img src="{{ asset('images/icons/007-thumb-up.png')}}" alt="application form" width="45px" height="45px;">
+                        <p>
+                            Job well done, bring on<br> more bookings!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row booking_journey booking_journey_part4">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="booking_journey-btn">
+                        <a class="l58button_booking_journey" href="/custom-bookings.php">Make a booking</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row gallery_section">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <h2>Gallery</h2>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+
+
+    <div class="gallery">
+        <div class="item">
+            <div class="clearfix">
+                <ul id="image-gallery" class="gallery_container gallery list-unstyled cS-hidden">
+
+                    {% for content in contents %}
+                        // Display the images in an img tag?
+                        // List out the contents?
+                        // Whatever
+                    {% endfor %}
+
+                    <li data-thumb="{{ asset('img/thumb/cS-1.jpg')}}">
+                        <img src="{{ asset('img/cS-1.jpg')}}" />
+                    </li>
+
+                    <li data-thumb="{{ asset('img/thumb/cS-2.jpg')}}">
+                        <img src="{{ asset('img/cS-2.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-3.jpg')}}">
+                        <img src="{{ asset('img/cS-3.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-4.jpg')}}">
+                        <img src="{{ asset('img/cS-4.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-5.jpg')}}">
+                        <img src="{{ asset('img/cS-5.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-6.jpg')}}">
+                        <img src="{{ asset('img/cS-6.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-7.jpg')}}">
+                        <img src="{{ asset('img/cS-7.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-8.jpg')}}">
+                        <img src="{{ asset('img/cS-8.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-9.jpg')}}">
+                        <img src="{{ asset('img/cS-9.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-10.jpg')}}">
+                        <img src="{{ asset('img/cS-10.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-11.jpg')}}">
+                        <img src="{{ asset('img/cS-11.jpg')}}" />
+                    </li>
+                    <li data-thumb="{{ asset('img/thumb/cS-12.jpg')}}">
+                        <img src="{{ asset('img/cS-12.jpg')}}" />
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="{{ asset('js/lightslider.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image-gallery').lightSlider({
+                gallery:true,
+                item:1,
+                thumbItem:9,
+                slideMargin: 0,
+                speed:500,
+                auto:true,
+                loop:true,
+                verticalHeight:800,
+                onSliderLoad: function() {
+                    $('#image-gallery').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+
+
+{% endblock %}
+
+
+

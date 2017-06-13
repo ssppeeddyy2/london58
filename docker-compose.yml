@@ -1,0 +1,6 @@
+web:
+    image: vincentchalamon/symfony
+    volumes:
+        - .:/var/www
+    ports:
+        - "8000:80"
